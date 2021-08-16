@@ -1,7 +1,4 @@
-<table class="table">
-  <tr *ngFor="let category of categories">
-    <th>{{category.categoryName}}</th>
-  </tr>
-  
 
-</table>
+<ul class="list-group">
+  <li *ngFor="let category of categories" class="list-group-item">{{category.categoryName}}</li>
+</ul>

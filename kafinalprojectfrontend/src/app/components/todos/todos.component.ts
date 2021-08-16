@@ -7,15 +7,15 @@ import { TodosService } from 'src/app/services/todos.service';
   styleUrls: ['./todos.component.css'],
 })
 export class TodosComponent implements OnInit {
-  todos: Todo[] = [];
+  todos: Todo;
   constructor(private todosService:TodosService) {}
 
   ngOnInit(): void {
-this.getProducts();
+//this.getProducts();
   }
-  getProducts(){
-    this.todosService.getProducts().subscribe(response=>{
-    this.todos = response
-    })
-  }
+  // getProducts(){
+  //   this.todosService.getProducts().subscribe(response=>{
+  //   this.todos = response
+  //   })
+  // }
 }
