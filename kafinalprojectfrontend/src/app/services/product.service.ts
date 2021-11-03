@@ -11,13 +11,15 @@ export class ProductService {
   apiURL = 'https://localhost:44366/api/products/';
   constructor(private httpClient: HttpClient) {}
   getProducts(): Observable<ListResponseModel<Product>> {
-    let newPath=this.apiURL+'getall'
+    let newPath = this.apiURL + 'getall';
     return this.httpClient.get<ListResponseModel<Product>>(newPath);
   }
-  getProductsByCategory(categoryId:number): Observable<ListResponseModel<Product>> {
-    let newPath = this.apiURL + "getbycategory?categoryId="+categoryId
-    
+  getProductsByCategory(
+    categoryId: number
+  ): Observable<ListResponseModel<Product>> {
+    let newPath = this.apiURL + 'getbycategory?categoryId=' + categoryId;
+    console.log(newPath);
     return this.httpClient.get<ListResponseModel<Product>>(newPath);
-   
-  } 
+    
+  }
 }
